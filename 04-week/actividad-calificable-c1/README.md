@@ -1,4 +1,4 @@
-# 📱 FilaFácil - Planificación del Proyecto Móvil
+# 📱 FilaFácil 
 
 ## Project Pitch
 
