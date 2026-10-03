@@ -88,12 +88,3 @@ Ver `mapa-navegacion.svg`. Resumen del flujo:
 
 ---
 
-### Cómo entregar
-1. Copia estos 5 archivos dentro de la carpeta `04-week/` de tu fork clonado.
-2. Desde la terminal, en la carpeta del repo:
-   ```
-   git add .
-   git commit -m "Entrega semana 04"
-   git push
-   ```
-3. Verifica en GitHub que la carpeta `04-week/` muestre el `README.md` y los 4 SVG.
