@@ -1,12 +1,12 @@
+
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 
-import ProductDetailPage from '../features/products/presentation/ProductDetailPage';
-import ProductFormPage from '../features/products/presentation/ProductFormPage';
-import ProductListPage from '../features/products/presentation/ProductListPage';
+import LoginPage from '../features/auth/presentation/LoginPage';
+import RegisterPage from '../features/auth/presentation/RegisterPage';
+import ProfilePage from '../features/auth/presentation/ProfilePage';
 
-/* CSS base de Ionic (obligatorio) */
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
@@ -15,22 +15,18 @@ import '@ionic/react/css/padding.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-/* Tema de la aplicación */
 import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/productos" component={ProductListPage} />
-        <Route exact path="/productos/nuevo" component={ProductFormPage} />
-        {/* React Router v5 puede activar la ruta equivocada si dos patrones coinciden
-            (/productos/nuevo también encajaría con /productos/:id). Por eso :id se
-            restringe a dígitos y "nuevo" no lo activa. */}
-        <Route exact path="/productos/:id(\d+)" component={ProductDetailPage} />
-        <Route exact path="/productos/:id(\d+)/editar" component={ProductFormPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/profile" component={ProfilePage} />
+
         <Route exact path="/">
-          <Redirect to="/productos" />
+          <Redirect to="/login" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

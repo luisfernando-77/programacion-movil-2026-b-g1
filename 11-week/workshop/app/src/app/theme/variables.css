@@ -1,9 +1,94 @@
-/* Tema mínimo: verde institucional como color primario */
+
+/* Attendance Control — Design tokens */
+
 :root {
-  --ion-color-primary: #009540;
-  --ion-color-primary-rgb: 0, 149, 64;
+  /* Primary color */
+  --ion-color-primary: #007a35;
+  --ion-color-primary-rgb: 0, 122, 53;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #008338;
-  --ion-color-primary-tint: #1aa053;
+  --ion-color-primary-shade: #006b2f;
+  --ion-color-primary-tint: #1a8749;
+
+  /* Secondary color */
+  --ion-color-secondary: #334155;
+  --ion-color-secondary-rgb: 51, 65, 85;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #2d394b;
+  --ion-color-secondary-tint: #475569;
+
+  /* Success */
+  --ion-color-success: #166534;
+  --ion-color-success-rgb: 22, 101, 52;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+
+  /* Danger */
+  --ion-color-danger: #b42318;
+  --ion-color-danger-rgb: 180, 35, 24;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+
+  /* Background and text */
+  --ion-background-color: #ffffff;
+  --ion-text-color: #1f2937;
+  --ion-toolbar-background: #ffffff;
+  --ion-item-background: #ffffff;
+
+  /* Typography */
+  --font-small: 0.875rem;
+  --font-body: 1rem;
+  --font-heading: 1.5rem;
+  --font-title: 1.75rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Layout */
+  --content-max-width: 480px;
+  --touch-target-min: 44px;
+}
+
+/* Shared typography */
+
+body {
+  font-size: var(--font-body);
+}
+
+h1 {
+  font-size: var(--font-title);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Shared form layout */
+
+.auth-container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.auth-container ion-button {
+  min-height: var(--touch-target-min);
+}
+
+.auth-container ion-input {
+  font-size: var(--font-body);
+}
+
+@media (min-width: 768px) {
+  .auth-container {
+    padding: var(--space-xl);
+  }
 }
