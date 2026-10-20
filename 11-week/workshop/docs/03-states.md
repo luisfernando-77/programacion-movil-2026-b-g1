@@ -49,13 +49,24 @@ Verified result:
 The test checks the error message, the Retry button,
 and the loading state after clicking Retry.
 
+
 ## 5. Evidence
 
-Screenshots to add:
+The following screenshots show the three verified
+states of the Attendance History screen.
 
-- `img/attendance-data.png`
-- `img/attendance-empty.png`
-- `img/attendance-error.png`
+### Data state
+
+![Attendance records](img/attendance-data.png)
+
+### Empty state
+
+![Empty attendance list](img/attendance-empty.png)
+
+### Error state
+
+![Attendance loading error and Retry button](img/attendance-error.png)
+
 
 ## 6. Current Limitations
 
