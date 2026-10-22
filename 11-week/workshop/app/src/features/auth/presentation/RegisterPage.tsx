@@ -121,9 +121,18 @@ export default function RegisterPage() {
             />
           </IonItem>
 
+          <IonText color="medium">
+            <p className="ion-padding-start">
+              Example: student@example.com
+            </p>
+          </IonText>
+
           {email.length > 0 && emailError && (
             <IonText color="danger">
-              <p role="alert">Enter a valid email address.</p>
+              <p role="alert" className="ion-padding-start">
+                Check your email format. Include an @ sign
+                and a domain, such as example.com.
+              </p>
             </IonText>
           )}
 
@@ -146,22 +155,34 @@ export default function RegisterPage() {
             </IonText>
           )}
 
+          <IonText>
+            <p><strong>Choose your role</strong></p>
+          </IonText>
+
           <IonText color="medium">
-            <p>Role</p>
+            <p>
+              Student: view your attendance records.
+              Teacher: manage classes and attendance.
+            </p>
           </IonText>
 
           <IonRadioGroup
+            aria-label="Choose account role"
             value={role}
             onIonChange={(e) =>
               setRole(e.detail.value as UserRole)
             }
           >
             <IonItem>
-              <IonRadio value="STUDENT">Student</IonRadio>
+              <IonRadio value="STUDENT">
+                Student — View my attendance
+              </IonRadio>
             </IonItem>
 
             <IonItem>
-              <IonRadio value="TEACHER">Teacher</IonRadio>
+              <IonRadio value="TEACHER">
+                Teacher — Manage classes
+              </IonRadio>
             </IonItem>
           </IonRadioGroup>
 
