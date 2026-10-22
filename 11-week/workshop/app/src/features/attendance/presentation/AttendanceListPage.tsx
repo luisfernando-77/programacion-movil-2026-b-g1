@@ -37,7 +37,6 @@ export default function AttendanceListPage() {
     setError(false);
 
     try {
-      // Simulated records until the backend is connected.
       await new Promise((resolve) => setTimeout(resolve, 700));
 
       const params = new URLSearchParams(window.location.search);
@@ -101,7 +100,14 @@ export default function AttendanceListPage() {
         ) : (
           <IonList>
             {records.map((record) => (
-              <IonItem key={record.id}>
+              <IonItem
+                key={record.id}
+                button
+                detail
+                routerLink={`/attendance/${record.id}`}
+                routerDirection="forward"
+                aria-label={`View attendance details for ${record.course}`}
+              >
                 <IonLabel>
                   <h2>{record.course}</h2>
                   <p>{record.date} — {record.status}</p>

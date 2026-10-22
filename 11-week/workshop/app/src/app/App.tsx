@@ -11,6 +11,7 @@ import LoginPage from '../features/auth/presentation/LoginPage';
 import RegisterPage from '../features/auth/presentation/RegisterPage';
 import ProfilePage from '../features/auth/presentation/ProfilePage';
 import AttendanceListPage from '../features/attendance/presentation/AttendanceListPage';
+import AttendanceDetailPage from '../features/attendance/presentation/AttendanceDetailPage';
 
 setupIonicReact();
 
@@ -22,11 +23,19 @@ export default function App() {
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/profile" component={ProfilePage} />
+
           <Route
             exact
             path="/attendance"
             component={AttendanceListPage}
           />
+
+          <Route
+            exact
+            path="/attendance/:id"
+            component={AttendanceDetailPage}
+          />
+
           <Route exact path="/">
             <Redirect to="/login" />
           </Route>
