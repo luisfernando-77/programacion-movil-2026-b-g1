@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FilaFácil | Optimización y pruebas</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <script src="src/app.js" type="module"></script>
+</head>
+<body>
+  <main class="app">
+    <header><small>FilaFácil · Semana 14</small><h1>Mis turnos</h1><p>Lista optimizada y medición de rendimiento</p></header>
+    <section class="content">
+      <label for="busqueda">Buscar servicio</label>
+      <input id="busqueda" type="search" placeholder="Ej. odontología" autocomplete="off">
+      <p id="resumen" class="hint" aria-live="polite"></p>
+      <nav class="tabs" aria-label="Vistas de la lista">
+        <button id="original" type="button">Antes</button>
+        <button id="optimizado" type="button" class="active">Después (mejorado)</button>
+      </nav>
+      <p id="descripcion" class="hint"></p>
+      <ul id="lista" class="turnos"></ul>
+      <button id="mas" class="secondary" type="button" hidden>Mostrar más</button>
+      <section class="medicion">
+        <h2>Medición antes / después</h2>
+        <p>Se usa el mismo conjunto de turnos en ambas versiones. La medición es de tiempo de renderizado en este navegador.</p>
+        <button type="button" id="medir">Medir rendimiento</button>
+        <div id="resultados" class="resultados" aria-live="polite">Presiona «Medir rendimiento» para obtener valores reales.</div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
