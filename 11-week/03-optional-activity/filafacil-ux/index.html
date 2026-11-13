@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilaFácil | Rediseño UX</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="cabecera">
+      <div><p class="marca">FilaFácil</p><h1>Organiza tu turno</h1><p class="subtitulo">Consulta la fila sin complicaciones.</p></div>
+      <span class="icono" aria-hidden="true">🎟️</span>
+    </header>
+
+    <nav class="pestanas" aria-label="Navegación principal">
+      <button class="pestana activa" data-tab="inicio" aria-current="page">Inicio</button>
+      <button class="pestana" data-tab="mis-turnos">Mis turnos</button>
+      <button class="pestana" data-tab="ayuda">Ayuda</button>
+    </nav>
+
+    <section id="inicio" class="panel" aria-labelledby="titulo-inicio">
+      <h2 id="titulo-inicio">Solicita tu atención</h2>
+      <p>Selecciona el servicio y solicita un turno de forma fácil.</p>
+      <label for="servicio">Servicio</label>
+      <select id="servicio"><option>Atención general</option><option>Información</option><option>Radicación de documentos</option></select>
+      <button id="solicitar" class="principal">Solicitar turno</button>
+    </section>
+
+    <section id="mis-turnos" class="panel oculto" aria-labelledby="titulo-turnos">
+      <h2 id="titulo-turnos">Mis turnos</h2>
+      <p>Revisa el turno asignado y cuántas personas tienes delante.</p>
+      <div id="estado" role="status" aria-live="polite"></div>
+      <div class="pruebas" aria-label="Pruebas de estados">
+        <p class="nota">Prueba los estados de la pantalla:</p>
+        <button id="ver-datos">Con datos</button>
+        <button id="ver-vacio">Vacío</button>
+        <button id="ver-error">Error</button>
+      </div>
+    </section>
+
+    <section id="ayuda" class="panel oculto" aria-labelledby="titulo-ayuda">
+      <h2 id="titulo-ayuda">¿Cómo funciona?</h2>
+      <p>1. Ve a Inicio y elige un servicio.</p>
+      <p>2. Presiona «Solicitar turno».</p>
+      <p>3. Consulta el resultado en «Mis turnos».</p>
+    </section>
+    <footer>Prototipo académico · Semana 11</footer>
+  </main>
+</body>
+</html>
