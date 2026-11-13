@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FilaFácil | Semana 13</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="phone"><header><p class="brand">FilaFácil</p><h1>Accede a tus turnos</h1><p>Inicia sesión para consultar tus datos de manera segura.</p></header>
+<section class="body"><form id="login"><h2>Iniciar sesión</h2><label for="correo">Correo</label><input id="correo" type="email" value="demo@filafacil.test" autocomplete="username" required><label for="clave">Contraseña</label><input id="clave" type="password" value="Demo1234!" autocomplete="current-password" required><button type="submit">Entrar</button><p class="help">Cuenta de demostración incluida para pruebas locales. No uses contraseñas reales.</p></form>
+<section id="zona" hidden><h2>Mis turnos</h2><p>Este listado solo aparece después de enviar un token válido al servidor.</p><button id="consultar">Consultar turnos protegidos</button><ul id="turnos" aria-live="polite"></ul><button id="invalidar" class="secondary">Probar token inválido (401)</button><button id="salir" class="secondary">Cerrar sesión</button></section>
+<label class="check"><input id="sinred" type="checkbox"> Simular falta de conexión</label><p id="estado" class="estado" role="status" aria-live="polite">Introduce tus datos para comenzar.</p></section><footer>Prototipo académico · Semana 13</footer></main><script src="app.js" type="module"></script></body></html>
