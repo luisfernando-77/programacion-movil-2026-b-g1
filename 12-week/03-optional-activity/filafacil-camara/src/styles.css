@@ -1,0 +1,22 @@
+:root { font-family: Arial, sans-serif; color: #153348; background: #eaf3f8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app { margin: 20px auto; max-width: 440px; min-height: calc(100vh - 40px); border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 10px 30px #113c571b; }
+.encabezado { background: #095b82; color: white; padding: 28px 24px; }
+.marca { font-weight: bold; }
+h1 { font-size: 1.65rem; margin: 20px 0 8px; }
+.encabezado p { margin-bottom: 0; line-height: 1.5; }
+nav { display: flex; border-bottom: 1px solid #dde6eb; }
+nav a { width: 50%; padding: 18px 12px; text-align: center; color: #095b82; text-decoration: none; font-weight: bold; }
+nav a[aria-current] { background: #d7effe; }
+.contenido { padding: 26px 24px; }
+h2 { margin-top: 0; }
+p { line-height: 1.55; }
+button { width: 100%; min-height: 54px; background: #087f6b; border: none; border-radius: 10px; color: white; font: bold 1.1rem Arial, sans-serif; cursor: pointer; }
+button:disabled { opacity: .65; cursor: wait; }
+button:focus-visible, a:focus-visible { outline: 3px solid #eea11b; outline-offset: 3px; }
+#estado { padding: 12px; background: #f0f6f9; border-radius: 8px; }
+.vista img { width: 100%; max-height: 300px; object-fit: contain; border-radius: 9px; }
+.nota, footer { color: #4f6775; font-size: .86rem; }
+footer { padding: 20px; text-align: center; }
+@media(max-width: 480px) { .app { margin: 0; min-height: 100vh; border-radius: 0; } }

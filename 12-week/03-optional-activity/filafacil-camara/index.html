@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c597d" />
+  <title>FilaFácil | Cámara</title>
+</head>
+<body>
+  <main class="app">
+    <header class="encabezado">
+      <span class="marca">FilaFácil</span>
+      <h1>Registro con cámara</h1>
+      <p>Toma una foto de referencia para acompañar tu turno.</p>
+    </header>
+    <nav aria-label="Secciones"><a href="#inicio">Inicio</a><a href="#camara" aria-current="page">Cámara</a></nav>
+    <section id="camara" class="contenido">
+      <h2>Capturar imagen</h2>
+      <p>La aplicación solicitará permiso para usar la cámara. Puedes rechazarlo.</p>
+      <button id="tomar-foto" type="button">📷 Tomar foto</button>
+      <p id="estado" role="status" aria-live="polite">Sin foto todavía.</p>
+      <div id="vista" class="vista" hidden>
+        <img id="imagen" alt="Foto capturada con la cámara del dispositivo" />
+      </div>
+      <p class="nota">La foto solo se muestra en esta pantalla y no se envía a ningún servidor.</p>
+    </section>
+    <footer>Actividad opcional · Semana 12</footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
